@@ -26,15 +26,16 @@ export default function FlashSales() {
       <div className={styles.content}>
         <Swiper
           modules={[Navigation, Pagination]}
-          slidesPerView={1.5}
+          slidesPerView={2}
+          spaceBetween={100}
           breakpoints={{
             0: {
               slidesPerView: 8,
-              spaceBetween: 100,
+              spaceBetween: 20,
             },
             760: {
               slidesPerView: 4,
-              spaceBetween: 40,
+              spaceBetween: 20,
             },
           }}
         >
