@@ -26,7 +26,7 @@ export default function FlashSales() {
       <div className={styles.content}>
         <Swiper
           modules={[Navigation, Pagination]}
-          slidesPerView={1.4}
+          slidesPerView={1.5}
           breakpoints={{
             0: {
               slidesPerView: 8,
