@@ -14,7 +14,7 @@ export default function FlashSales() {
   const { products } = useProducts();
 
   return (
-    <div className={styles.flashSales}>
+    <div className={styles.flashSales} id="flashSales">
       <div className={styles.title}>
         <h2>
           <span>

@@ -7,6 +7,7 @@ import men from "../../../public/images/men.png";
 import electric from "../../../public/images/electric.png"
 
 export default function Category() {
+
   return (
     <div className={styles.category}>
       <div className={styles.container}>

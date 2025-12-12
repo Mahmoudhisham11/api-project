@@ -18,14 +18,11 @@ export default function Header() {
         <Link href={"/"} className={styles.headerLinks}>
           Home
         </Link>
-        <Link href={"/"} className={styles.headerLinks}>
+        <Link href={"#flashSales"} className={styles.headerLinks}>
           flash sale
         </Link>
-        <Link href="#today" className={styles.headerLinks}>
+        <Link href={"#today"} className={styles.headerLinks}>
           today for you!
-        </Link>
-        <Link href={"/"} className={styles.headerLinks}>
-          best selling
         </Link>
       </div>
       <div className={styles.right}>
@@ -58,25 +55,18 @@ export default function Header() {
           Home
         </Link>
         <Link
-          href={"/"}
+          href={"#flashSales"}
           onClick={() => setMenuOpen(false)}
           className={styles.headerLinks}
         >
           Flash Sale
         </Link>
         <Link
-          href="#today"
+          href={"#today"}
           onClick={() => setMenuOpen(false)}
           className={styles.headerLinks}
         >
           Today for you!
-        </Link>
-        <Link
-          href={"/"}
-          onClick={() => setMenuOpen(false)}
-          className={styles.headerLinks}
-        >
-          Best Selling
         </Link>
         <Link
           href={"/"}
