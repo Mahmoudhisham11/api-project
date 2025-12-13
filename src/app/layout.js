@@ -1,9 +1,6 @@
-// src/app/layout.js
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
-import { ProductsProvider } from "./context/ProductsContext";
 
-// استخدام Google Fonts الصحيحة
 const geistSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,9 +26,23 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Oswald:wght@200..700&family=Playwrite+NO:wght@100..400&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ProductsProvider>{children}</ProductsProvider>
+        {children}
       </body>
     </html>
   );

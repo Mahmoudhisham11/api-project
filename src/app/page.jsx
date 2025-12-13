@@ -1,20 +1,28 @@
 "use client";
-import Image from "next/image";
-import styles from "./page.module.css";
-import Header from "../../components/mainComponents/Header/Header";
-import Hero from "../../components/mainComponents/Hero/Hero";
-import Category from "../../components/mainComponents/Category/Category";
-import FlashSales from "../../components/mainComponents/FlashSale/FlashSale";
-import Today from "../../components/mainComponents/Today/Today";
-
 export default function Home() {
+  const showNotfication = () => {
+    if (!("Notification" in window)) {
+      alert("المتصفح لا يدعم الاشعارات");
+    }
+    if (Notification.permission === "granted") {
+      new Notification("Hello World", {
+        body: "Test Work",
+      });
+    } else if (Notification.permission !== "denied") {
+      Notification.requestPermission().then((permission) => {
+        if (permission === "granted") {
+          new Notification("Done", {
+            body: "Notifications Works",
+          });
+        }
+      });
+    }
+  };
+
   return (
     <div className="main">
-      <Header />
-      <Hero />
-      <Category />
-      <FlashSales />
-      <Today />
+      <p>Test Notfications</p>
+      <button onClick={showNotfication}>Send notfication</button>
     </div>
   );
 }
